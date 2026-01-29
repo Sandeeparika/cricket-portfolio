@@ -6,180 +6,130 @@
   <title>Sandeep Parika | Elite Cricket Umpire, Coach & Analyst</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #f4f6f8;
-      color: #1f2933;
+    :root {
+      --primary-green: #0b3d2e;
+      --accent-gold: #c5a059;
+      --soft-white: #f8fafc;
+      --text-dark: #1f2933;
+      --transition: all 0.3s ease;
     }
-    header {
-      background: linear-gradient(135deg, #0b3d2e, #145a32);
-      color: #fff;
-      padding: 70px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin: 6px 0;
-    }
-    .tagline {
-      font-weight: 300;
-      opacity: 0.9;
-    }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 30px 20px;
-    }
-    section {
-      background: #ffffff;
-      padding: 35px;
-      margin-bottom: 30px;
-      border-radius: 14px;
-      box-shadow: 0 12px 25px rgba(0,0,0,0.06);
-    }
-    h2 {
-      color: #0b3d2e;
-      font-size: 1.6rem;
-      margin-bottom: 20px;
-      border-left: 5px solid #0b3d2e;
-      padding-left: 12px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-    .card {
-      background: #f9fafb;
-      padding: 22px;
-      border-radius: 12px;
-      border-left: 4px solid #0b3d2e;
-    }
-    .highlight {
-      background: #ecfdf5;
-      border-left-color: #10b981;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 14px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    footer {
-      background: #0b3d2e;
-      color: #fff;
-      text-align: center;
-      padding: 30px 15px;
-    }
-    footer p {
-      margin: 0;
-      font-size: 0.9rem;
-      opacity: 0.85;
-    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--soft-white); color: var(--text-dark); line-height: 1.6; }
+
+    nav { background: rgba(11, 61, 46, 0.95); backdrop-filter: blur(10px); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    nav ul { display: flex; justify-content: center; list-style: none; margin: 0; padding: 0; }
+    nav ul li { margin: 0 15px; }
+    nav ul li a { color: white; text-decoration: none; font-size: 0.85rem; font-weight: 400; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
+    nav ul li a:hover { color: var(--accent-gold); }
+
+    header { background: linear-gradient(135deg, #0b3d2e 0%, #1a4a3a 100%); color: #fff; padding: 100px 20px; text-align: center; }
+    header h1 { font-size: 3.5rem; margin-bottom: 10px; }
+    .subtitle { color: var(--accent-gold); font-weight: 600; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; }
+
+    .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+    section { background: #ffffff; padding: 40px; margin-bottom: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
+    h2 { color: var(--primary-green); font-size: 1.8rem; margin-bottom: 25px; border-left: 5px solid var(--accent-gold); padding-left: 15px; }
+
+    /* Grid Layouts */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { padding: 25px; border-radius: 15px; border: 1px solid #f0f0f0; transition: var(--transition); }
+    .card:hover { transform: translateY(-5px); border-color: var(--accent-gold); }
+    .card strong { color: var(--primary-green); display: block; margin-bottom: 5px; }
+
+    /* Certifications & Gallery */
+    .cert-grid, .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
+    .img-box { border-radius: 12px; overflow: hidden; border: 1px solid #ddd; background: #fff; }
+    .img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
+    .img-box:hover img { transform: scale(1.08); }
+    .img-caption { padding: 10px; font-size: 0.8rem; text-align: center; background: #fff; font-weight: 600; color: var(--primary-green); }
+
+    footer { background: var(--primary-green); color: #fff; text-align: center; padding: 50px 20px; }
+    @media (max-width: 768px) { header h1 { font-size: 2.5rem; } }
   </style>
 </head>
 <body>
 
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#gallery">Insights</a></li>
+  </ul>
+</nav>
+
 <header>
   <h1>Sandeep Parika</h1>
-  <p><strong>Certified Cricket Umpire • Certified Coach • Performance Analyst</strong></p>
-  <p class="tagline">Elite Officiating | Data‑Driven Coaching | High‑Performance Cricket Development</p>
+  <p class="subtitle">Umpire • Coach • Performance Analyst</p>
+  <p>Elite Officiating | Data‑Driven Coaching | Rajasthan Royals Academy</p>
   <p>📍 USA</p>
 </header>
 
 <div class="container">
 
-  <section>
+  <section id="about">
     <h2>Professional Summary</h2>
-    <p>
-      Certified Level Three Umpire (New Zealand Cricket), ICC Level 1 Umpire & Coach with over <strong>8+ years</strong> of experience across grassroots, domestic, and elite cricket. Officiated in New Zealand Premier Cricket and USA Cricket national tournaments including <strong>Minor League Cricket, U19 Domestic Championships, and Conference T20 events</strong>.
-    </p>
-    <p>
-      Currently serving as <strong>Assistant Coach & Performance Analyst</strong> at <strong>Rajasthan Royals Academy Washington</strong>, delivering high‑performance training supported by advanced analytics, biomechanics, and modern cricket technologies.
-    </p>
+    <p>Certified <strong>Level Three Umpire (New Zealand Cricket)</strong> and <strong>ICC Level 1 Umpire & Coach</strong>. Over 8+ years of experience across domestic and elite cricket, currently serving as <strong>Assistant Coach & Performance Analyst</strong> at Rajasthan Royals Academy Washington.</p>
   </section>
 
-  <section>
-    <h2>Leadership & Honors</h2>
-    <div class="grid">
-      <div class="card highlight">🏅 Best Umpire – ANCL (2024)</div>
-      <div class="card">⚖️ Umpires Committee Chair – ANCL</div>
-      <div class="card">🎥 TV Umpire – Minor League Cricket Finals (2025)</div>
-      <div class="card">🏏 Assistant Coach – Rajasthan Royals Academy Washington</div>
-      <div class="card">🏆 Peter Walker Cup – Auckland Cricket (2018)</div>
-      <div class="card">🧑‍⚖️ Premier Panel Umpire – Auckland Cricket (NZ)</div>
+  <section id="certifications">
+    <h2>Certifications & Credentials</h2>
+    <div class="cert-grid">
+      <div class="img-box">
+        <img src="IMG_0382.jpg" alt="NZ Level 3 Certification">
+        <div class="img-caption">NZ Level 3 Certification</div>
+      </div>
+      <div class="img-box">
+        <img src="ICC_Coaching_Level1.jpg" alt="ICC Coaching Level 1">
+        <div class="img-caption">ICC Coaching Level 1</div>
+      </div>
+      <div class="img-box">
+        <img src="ICC_Umpiring_Level1.jpg" alt="ICC Umpiring Level 1">
+        <div class="img-caption">ICC Umpiring Level 1</div>
+      </div>
+      <div class="img-box">
+        <img src="NZ_Level3_Board.jpg" alt="NZ Level 3 Umpire Board">
+        <div class="img-caption">NZ Umpire Board</div>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2>Professional Roles</h2>
-    <div class="grid">
-      <div class="card"><strong>Assistant Coach & Performance Analyst</strong><br/>Rajasthan Royals Academy Washington (2025 – Present)</div>
-      <div class="card"><strong>Umpire</strong><br/>USA Cricket – National Tournaments (2024 – Present)</div>
-      <div class="card"><strong>Umpires Committee Chair</strong><br/>American National Cricket League (2024 – Present)</div>
-      <div class="card"><strong>Premier Panel Umpire</strong><br/>Auckland Cricket, New Zealand (2017 – 2019)</div>
-      <div class="card"><strong>Performance Analyst & Assistant Coach</strong><br/>International Freelance (2017 – Present)</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Certifications & Education</h2>
-    <ul>
-      <li>ICC Umpire Course – Level 1</li>
-      <li>ICC Coaching Course – Level 1</li>
-      <li>Level 3 Umpire Certification – New Zealand Cricket</li>
-      <li>USAC USA TV Umpiring Training</li>
-      <li>ICC Pitch Curator & Coaching Foundation Certificates</li>
-      <li>Bachelor of Technology – Computer Science & Engineering</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Gallery</h2>
+  <section id="gallery">
+    <h2>Visual Insights</h2>
     <div class="gallery">
-      <img src="IMG_0382.jpg" alt="International Umpiring Certification" />
-      <img src="IMG_3187.jpg" alt="Professional Match Officiating" />
-      <img src="IMG_2509.jpg" alt="Batting & Coaching Session" />
+      <div class="img-box">
+        <img src="IMG_3187.jpg" alt="Professional Officiating">
+        <div class="img-caption">Professional Officiating</div>
+      </div>
+      <div class="img-box">
+        <img src="Professional_Officiating.jpg" alt="Match Action">
+        <div class="img-caption">Match Day Leadership</div>
+      </div>
+      <div class="img-box">
+        <img src="IMG_2509.jpg" alt="Coaching Session">
+        <div class="img-caption">Batting & Tactical Coaching</div>
+      </div>
+      <div class="img-box">
+        <img src="ANCL_Award.jpg" alt="ANCL Best Umpire">
+        <div class="img-caption">ANCL Award Ceremony</div>
+      </div>
     </div>
   </section>
 
-  <section>
+  <section id="contact">
     <h2>Contact</h2>
-    <div class="contact-grid">
-      <div class="card">📧 Email<br/><strong>parikasandee@gmail.com</strong></div>
-      <div class="card">📞 Phone<br/><strong>+1 (732) 213 9580</strong></div>
-      <div class="card">📍 Location<br/><strong>United States</strong></div>
+    <div class="grid">
+      <div class="card"><strong>Email</strong>parikasandee@gmail.com</div>
+      <div class="card"><strong>Phone</strong>+1 (732) 213 9580</div>
+      <div class="card"><strong>Location</strong>United States</div>
     </div>
   </section>
 
 </div>
 
 <footer>
-  <p>© 2026 Sandeep Parika • Elite Cricket Umpire | Coach | Performance Analyst</p>
+  <p>© 2026 Sandeep Parika • Elite Cricket Professional</p>
 </footer>
 
 </body>
