@@ -31,33 +31,22 @@
     section { background: #ffffff; padding: 40px; margin-bottom: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
     h2 { color: var(--primary-green); font-size: 1.8rem; margin-bottom: 25px; border-left: 5px solid var(--accent-gold); padding-left: 15px; }
 
-    /* Admin Upload Section - Only visible for you to manage */
-    .upload-controls {
-      background: #f1f1f1;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      border: 2px dashed var(--accent-gold);
-      text-align: center;
-    }
-    .upload-btn {
-      background: var(--primary-green);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      display: inline-block;
-      margin-top: 10px;
-    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { padding: 25px; border-radius: 15px; border: 1px solid #f0f0f0; transition: var(--transition); }
+    .card:hover { transform: translateY(-5px); border-color: var(--accent-gold); }
+    .card strong { color: var(--primary-green); display: block; margin-bottom: 5px; }
 
-    /* Grid Layouts */
+    /* Certifications & Gallery Enhancements */
     .cert-grid, .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-    .img-box { border-radius: 12px; overflow: hidden; border: 1px solid #ddd; background: #fff; position: relative; }
-    .img-box img { width: 100%; height: 250px; object-fit: cover; transition: var(--transition); display: block; }
+    .img-box { border-radius: 12px; overflow: hidden; border: 1px solid #ddd; background: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .img-box img { width: 100%; height: auto; transition: transform 0.5s ease; display: block; }
     .img-box:hover img { transform: scale(1.05); }
-    .img-caption { padding: 12px; font-size: 0.85rem; text-align: center; font-weight: 600; color: var(--primary-green); border-top: 1px solid #eee; }
+    .img-caption { padding: 12px; font-size: 0.85rem; text-align: center; background: #fff; font-weight: 600; color: var(--primary-green); border-top: 1px solid #eee; }
+
+    .royals-highlight { border: 2px solid var(--accent-gold); }
 
     footer { background: var(--primary-green); color: #fff; text-align: center; padding: 50px 20px; }
+    @media (max-width: 768px) { header h1 { font-size: 2.5rem; } }
   </style>
 </head>
 <body>
@@ -66,7 +55,7 @@
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#gallery">Visual Insights</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -75,92 +64,74 @@
   <h1>Sandeep Parika</h1>
   <p class="subtitle">Umpire • Coach • Performance Analyst</p>
   <p>Elite Officiating | Data‑Driven Coaching | Rajasthan Royals Academy</p>
+  <p>📍 USA</p>
 </header>
 
 <div class="container">
 
-  <section id="admin">
-    <h2>Update Website Gallery</h2>
-    <p>Select a photo from your computer to add it to the <strong>Visual Insights</strong> section below.</p>
-    <div class="upload-controls">
-      <input type="file" id="imageInput" accept="image/*" style="display: none;">
-      <label for="imageInput" class="upload-btn">Choose Photo to Upload</label>
-      <input type="text" id="captionInput" placeholder="Enter Photo Caption (e.g. Coaching at RR Academy)" style="padding: 10px; width: 250px; border-radius: 5px; border: 1px solid #ccc;">
-    </div>
+  <section id="about">
+    <h2>Professional Summary</h2>
+    <p>Certified <strong>Level Three Umpire (New Zealand Cricket)</strong> and <strong>ICC Level 1 Umpire & Coach</strong>. Over 8+ years of experience across domestic and elite cricket, currently serving as <strong>Assistant Coach & Performance Analyst</strong> at Rajasthan Royals Academy Washington.</p>
   </section>
 
   <section id="certifications">
     <h2>Certifications & Credentials</h2>
     <div class="cert-grid">
-      <div class="img-box" style="border: 2px solid var(--accent-gold);">
-        <img src="Royals_Coaching_Hub_Certificate.jpg" alt="Royals Certification">
+      <div class="img-box royals-highlight">
+        <img src="Royals_Coaching_Hub_Certificate.jpg" alt="Royals Coaching Hub Foundation">
         <div class="img-caption">Royals Pro Coaching Foundation</div>
       </div>
       <div class="img-box">
-        <img src="IMG_0382.jpg" alt="NZ Level 3">
+        <img src="IMG_0382.jpg" alt="NZ Level 3 Certification">
         <div class="img-caption">NZ Level 3 Certification</div>
+      </div>
+      <div class="img-box">
+        <img src="ICC_Coaching_Level1.jpg" alt="ICC Coaching Level 1">
+        <div class="img-caption">ICC Coaching Level 1</div>
+      </div>
+      <div class="img-box">
+        <img src="ICC_Umpiring_Level1.jpg" alt="ICC Umpiring Level 1">
+        <div class="img-caption">ICC Umpiring Level 1</div>
+      </div>
+      <div class="img-box">
+        <img src="NZ_Level3_Board.jpg" alt="NZ Level 3 Umpire Board">
+        <div class="img-caption">NZ Umpire Board</div>
       </div>
     </div>
   </section>
 
   <section id="gallery">
     <h2>Visual Insights</h2>
-    <div class="gallery" id="photoGallery">
+    <div class="gallery">
       <div class="img-box">
-        <img src="IMG_3187.jpg" alt="Umpiring">
+        <img src="IMG_3187.jpg" alt="Professional Officiating">
         <div class="img-caption">Umpiring in Action</div>
       </div>
       <div class="img-box">
-        <img src="IMG_2509.jpg" alt="Coaching">
+        <img src="Professional_Officiating.jpg" alt="Match Action">
+        <div class="img-caption">Match Day Leadership</div>
+      </div>
+      <div class="img-box">
+        <img src="IMG_2509.jpg" alt="Coaching Session">
         <div class="img-caption">Batting & Tactical Coaching</div>
+      </div>
+      <div class="img-box">
+        <img src="ANCL_Award.jpg" alt="ANCL Best Umpire">
+        <div class="img-caption">ANCL Award Ceremony</div>
       </div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-      <div style="flex: 1; min-width: 250px;"><strong>Email:</strong> parikasandee@gmail.com</div>
-      <div style="flex: 1; min-width: 250px;"><strong>Phone:</strong> +1 (732) 213 9580</div>
+    <div class="grid">
+      <div class="card"><strong>Email</strong>parikasandee@gmail.com</div>
+      <div class="card"><strong>Phone</strong>+1 (732) 213 9580</div>
+      <div class="card"><strong>Location</strong>United States</div>
     </div>
   </section>
 
 </div>
-
-<script>
-  // JAVASCRIPT TO HANDLE IMAGE PREVIEW/UPLOAD
-  const imageInput = document.getElementById('imageInput');
-  const captionInput = document.getElementById('captionInput');
-  const photoGallery = document.getElementById('photoGallery');
-
-  imageInput.addEventListener('change', function() {
-    const file = this.files[0];
-    if (file) {
-      const reader = new FileReader();
-      
-      reader.onload = function(e) {
-        // Create new gallery item structure
-        const newImgBox = document.createElement('div');
-        newImgBox.className = 'img-box';
-        
-        const captionText = captionInput.value || "New Photo";
-        
-        newImgBox.innerHTML = `
-          <img src="${e.target.result}" alt="Uploaded Photo">
-          <div class="img-caption">${captionText}</div>
-        `;
-        
-        // Add to gallery
-        photoGallery.prepend(newImgBox);
-        
-        // Reset inputs
-        captionInput.value = "";
-      }
-      
-      reader.readAsDataURL(file);
-    }
-  });
-</script>
 
 <footer>
   <p>© 2026 Sandeep Parika • Elite Cricket Professional</p>
