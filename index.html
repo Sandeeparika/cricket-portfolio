@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,7 @@
     body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--soft-white); color: var(--text-dark); line-height: 1.6; }
 
     nav { background: rgba(11, 61, 46, 0.95); backdrop-filter: blur(10px); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    nav ul { display: flex; justify-content: center; list-style: none; margin: 0; padding: 0; }
+    nav ul { display: flex; justify-content: center; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
     nav ul li { margin: 0 15px; }
     nav ul li a { color: white; text-decoration: none; font-size: 0.85rem; font-weight: 400; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
     nav ul li a:hover { color: var(--accent-gold); }
@@ -38,14 +39,18 @@
 
     .cert-grid, .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
     .img-box { border-radius: 12px; overflow: hidden; border: 1px solid #ddd; background: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-    .img-box img { width: 100%; height: auto; transition: transform 0.5s ease; display: block; }
+    .img-box img { width: 100%; height: auto; transition: transform 0.5s ease; display: block; object-fit: cover; min-height: 300px; }
     .img-box:hover img { transform: scale(1.05); }
     .img-caption { padding: 12px; font-size: 0.85rem; text-align: center; background: #fff; font-weight: 600; color: var(--primary-green); border-top: 1px solid #eee; }
 
     .royals-highlight { border: 2px solid var(--accent-gold); }
 
     footer { background: var(--primary-green); color: #fff; text-align: center; padding: 50px 20px; }
-    @media (max-width: 768px) { header h1 { font-size: 2.5rem; } }
+    
+    @media (max-width: 768px) { 
+      header h1 { font-size: 2.5rem; }
+      nav ul li { margin: 5px 10px; }
+    }
   </style>
 </head>
 <body>
@@ -71,30 +76,35 @@
   <section id="about">
     <h2>Professional Summary</h2>
     <p>Certified <strong>Level Three Umpire (New Zealand Cricket)</strong> and <strong>ICC Level 1 Umpire & Coach</strong>. Over 8+ years of experience across domestic and elite cricket, currently serving as <strong>Assistant Coach & Performance Analyst</strong> at Rajasthan Royals Academy Washington.</p>
+    <p>Recognized achievements include <strong>Best Umpire of the Year – American National Cricket League (2024)</strong> and <strong>Peter Walker Cup</strong> for exceptional dedication to New Zealand cricket umpiring.</p>
   </section>
 
   <section id="certifications">
     <h2>Certifications & Credentials</h2>
     <div class="cert-grid">
-      <div class="img-box royals-highlight">
-        <img src="Royals_Coaching_Hub_Certificate.jpg" alt="Royals Coaching Hub Foundation">
-        <div class="img-caption">Royals Pro Coaching Foundation (May 2025)</div>
-      </div>
       <div class="img-box">
         <img src="IMG_0382.jpg" alt="NZ Level 3 Certification">
         <div class="img-caption">NZ Level 3 Certification</div>
       </div>
       <div class="img-box">
-        <img src="ICC_Coaching_Level1.jpg" alt="ICC Coaching Level 1">
-        <div class="img-caption">ICC Coaching Level 1</div>
+        <img src="ICC_Coaching_Foundation_Certificate.jpeg" alt="ICC Coaching Foundation">
+        <div class="img-caption">ICC Coaching Foundation (Oct 2024)</div>
       </div>
       <div class="img-box">
-        <img src="ICC_Umpiring_Level1.jpg" alt="ICC Umpiring Level 1">
-        <div class="img-caption">ICC Umpiring Level 1</div>
+        <img src="ICC_Level_1_Cricket_Coaching_Certificate.jpeg" alt="ICC Coaching Level 1">
+        <div class="img-caption">ICC Coaching Level 1 (Jun 2025)</div>
       </div>
       <div class="img-box">
-        <img src="NZ_Level3_Board.jpg" alt="NZ Level 3 Umpire Board">
-        <div class="img-caption">NZ Umpire Board</div>
+        <img src="ICC_Umpire_Foundation_Course_Certificate.jpeg" alt="ICC Umpire Foundation">
+        <div class="img-caption">ICC Umpire Foundation (Oct 2024)</div>
+      </div>
+      <div class="img-box">
+        <img src="ICC_Level_1_Umpire_Certificate.jpg" alt="ICC Umpiring Level 1">
+        <div class="img-caption">ICC Umpiring Level 1 (Jun 2025)</div>
+      </div>
+      <div class="img-box">
+        <img src="ICC_Pitch_Curator_Foundation_Certificate.jpeg" alt="ICC Pitch Curator Foundation">
+        <div class="img-caption">ICC Pitch Curator Foundation (Jun 2025)</div>
       </div>
     </div>
   </section>
@@ -103,28 +113,16 @@
     <h2>Visual Insights</h2>
     <div class="gallery">
       <div class="img-box">
-        <img src="https://photos.google.com/photo/AF1QipMrDQYujj78kNxLeNgrPCYkg1dJc7J92mW0jgWc" alt="Sandeep Parika - Elite Coaching Session">
-        <div class="img-caption">Performance Analysis & Player Development</div>
-      </div>
-      <div class="img-box">
-        <img src="https://photos.google.com/photo/AF1QipPjw208lPt4BUJyt_fuBrkQRlbzLsoCSyzCAV87" alt="Sandeep Parika - Professional Umpiring">
+        <img src="IMG_3187.jpg" alt="Professional Umpiring">
         <div class="img-caption">Elite Match Day Officiating</div>
-      </div>
-      <div class="img-box">
-        <img src="IMG_3187.jpg" alt="Professional Officiating">
-        <div class="img-caption">Umpiring in Action</div>
-      </div>
-      <div class="img-box">
-        <img src="Professional_Officiating.jpg" alt="Match Action">
-        <div class="img-caption">Match Day Leadership</div>
       </div>
       <div class="img-box">
         <img src="IMG_2509.jpg" alt="Coaching Session">
         <div class="img-caption">Batting & Tactical Coaching</div>
       </div>
       <div class="img-box">
-        <img src="ANCL_Award.jpg" alt="ANCL Best Umpire">
-        <div class="img-caption">ANCL Award Ceremony</div>
+        <img src="TV_Umpire_award_from_Peter_Nero.jpeg" alt="Award Ceremony">
+        <div class="img-caption">TV Umpire Award Recognition</div>
       </div>
     </div>
   </section>
@@ -132,9 +130,9 @@
   <section id="contact">
     <h2>Contact</h2>
     <div class="grid">
-      <div class="card"><strong>Email</strong>parikasandee@gmail.com</div>
-      <div class="card"><strong>Phone</strong>+1 (732) 213 9580</div>
-      <div class="card"><strong>Location</strong>United States</div>
+      <div class="card"><strong>Email</strong> parikasandee@gmail.com</div>
+      <div class="card"><strong>Phone</strong> +1 (732) 213-9580</div>
+      <div class="card"><strong>Location</strong> United States</div>
     </div>
   </section>
 
